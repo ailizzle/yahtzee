@@ -89,19 +89,6 @@ public class MainMenu extends javax.swing.JFrame {
 
         OnePlayer a = new OnePlayer();
         a.setVisible(true);
-        a.indicatorOnes.setVisible(false);
-        a.indicatorTwos.setVisible(false);
-        a.indicatorThrees.setVisible(false);
-        a.indicatorFours.setVisible(false);
-        a.indicatorFives.setVisible(false);
-        a.indicatorSixes.setVisible(false);
-        a.indicatorThreeOfAKind.setVisible(false);
-        a.indicatorFourOfAKind.setVisible(false);
-        a.indicatorFullHouse.setVisible(false);
-        a.indicatorSmallStraight.setVisible(false);
-        a.indicatorLargeStraight.setVisible(false);
-        a.indicatorChance.setVisible(false);
-        a.indicatorYahtzee.setVisible(false);
         
         a.Winner1.setVisible(false);
         a.Winner.setVisible(false);

@@ -666,13 +666,17 @@ public class TwoPlayer extends javax.swing.JFrame {
         NewGame.setBackground(new java.awt.Color(153, 153, 153));
         NewGame.setFont(new java.awt.Font("LiSong Pro", 0, 12)); // NOI18N
         NewGame.setText("New Game");
+        NewGame.setBounds(new java.awt.Rectangle(10, 10, 106, 29));
+        NewGame.setMaximumSize(new java.awt.Dimension(106, 29));
+        NewGame.setMinimumSize(new java.awt.Dimension(106, 29));
+        NewGame.setPreferredSize(new java.awt.Dimension(106, 29));
         NewGame.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 NewGameActionPerformed(evt);
             }
         });
         getContentPane().add(NewGame);
-        NewGame.setBounds(10, 10, 103, 29);
+        NewGame.setBounds(10, 46, 106, 29);
 
         Table.setFont(new java.awt.Font("LiSong Pro", 0, 14)); // NOI18N
         Table.setModel(new javax.swing.table.DefaultTableModel(
@@ -1422,6 +1426,18 @@ public class TwoPlayer extends javax.swing.JFrame {
         numTimesDieFivePressed++;
     }//GEN-LAST:event_FifthDieActionPerformed
 
+    public void ifCheck()
+    {
+        TotalScoreTextYou.setText(TotalScoreTextYou.getText() + a.findFinalScore());
+        TotalScoreTextBill.setText(TotalScoreTextBill.getText() + a.findFinalScoreBill());
+        if(a.findFinalScore()>a.findFinalScoreBill()) Winner1.setText("Player 1 is the winner!");
+        if(a.findFinalScore()<a.findFinalScoreBill()) Winner1.setText("Player 2 is the winner!");
+        Roll.setBackground(new java.awt.Color(204, 204, 204));
+        disableAllButtonsInTable();
+        disableAllDieButtons();
+        numTimesRollPressed = 3;
+    }
+    
     private void OnesYouActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OnesYouActionPerformed
         whosTurn++;
         if(whosTurn%2 == 1)
@@ -1453,14 +1469,7 @@ public class TwoPlayer extends javax.swing.JFrame {
                     a.billYahtzeeFinalCheck != 0 && a.billOnesFinalCheck != 0 && a.billTwosFinalCheck != 0 && a.billThreesFinalCheck != 0 && 
                     a.billFoursFinalCheck != 0 && a.billFivesFinalCheck != 0 && a.billSixesFinalCheck != 0)
             {
-                TotalScoreTextYou.setText(TotalScoreTextYou.getText() + a.findFinalScore());
-                TotalScoreTextBill.setText(TotalScoreTextBill.getText() + a.findFinalScoreBill());
-                if(a.findFinalScore()>a.findFinalScoreBill()) Winner1.setText("Player 1 is the winner!");
-                if(a.findFinalScore()<a.findFinalScoreBill()) Winner1.setText("Player 2 is the winner!");
-                Roll.setBackground(new java.awt.Color(204, 204, 204));
-                disableAllButtonsInTable();
-                disableAllDieButtons();
-                numTimesRollPressed = 3;
+                ifCheck();
             }
         }
         if(whosTurn%2 == 0)
@@ -1492,14 +1501,7 @@ public class TwoPlayer extends javax.swing.JFrame {
                     a.billYahtzeeFinalCheck != 0 && a.billOnesFinalCheck != 0 && a.billTwosFinalCheck != 0 && a.billThreesFinalCheck != 0 && 
                     a.billFoursFinalCheck != 0 && a.billFivesFinalCheck != 0 && a.billSixesFinalCheck != 0)
             {
-                TotalScoreTextYou.setText(TotalScoreTextYou.getText() + a.findFinalScore());
-                TotalScoreTextBill.setText(TotalScoreTextBill.getText() + a.findFinalScoreBill());
-                if(a.findFinalScore()>a.findFinalScoreBill()) Winner1.setText("Player 1 is the winner!");
-                if(a.findFinalScore()<a.findFinalScoreBill()) Winner1.setText("Player 2 is the winner!");
-                Roll.setBackground(new java.awt.Color(204, 204, 204));
-                disableAllButtonsInTable();
-                disableAllDieButtons();
-                numTimesRollPressed = 3;
+                ifCheck();
             }
         }
     }//GEN-LAST:event_OnesYouActionPerformed
@@ -1535,14 +1537,7 @@ public class TwoPlayer extends javax.swing.JFrame {
                     a.billYahtzeeFinalCheck != 0 && a.billOnesFinalCheck != 0 && a.billTwosFinalCheck != 0 && a.billThreesFinalCheck != 0 && 
                     a.billFoursFinalCheck != 0 && a.billFivesFinalCheck != 0 && a.billSixesFinalCheck != 0)
             {
-                TotalScoreTextYou.setText(TotalScoreTextYou.getText() + a.findFinalScore());
-                TotalScoreTextBill.setText(TotalScoreTextBill.getText() + a.findFinalScoreBill());
-                if(a.findFinalScore()>a.findFinalScoreBill()) Winner1.setText("Player 1 is the winner!");
-                if(a.findFinalScore()<a.findFinalScoreBill()) Winner1.setText("Player 2 is the winner!");
-                Roll.setBackground(new java.awt.Color(204, 204, 204));
-                disableAllButtonsInTable();
-                disableAllDieButtons();
-                numTimesRollPressed = 3;
+                ifCheck();
             }
         }
         if(whosTurn%2 == 0)
@@ -1574,14 +1569,7 @@ public class TwoPlayer extends javax.swing.JFrame {
                     a.billYahtzeeFinalCheck != 0 && a.billOnesFinalCheck != 0 && a.billTwosFinalCheck != 0 && a.billThreesFinalCheck != 0 && 
                     a.billFoursFinalCheck != 0 && a.billFivesFinalCheck != 0 && a.billSixesFinalCheck != 0)
             {
-                TotalScoreTextYou.setText(TotalScoreTextYou.getText() + a.findFinalScore());
-                TotalScoreTextBill.setText(TotalScoreTextBill.getText() + a.findFinalScoreBill());
-                if(a.findFinalScore()>a.findFinalScoreBill()) Winner1.setText("Player 1 is the winner!");
-                if(a.findFinalScore()<a.findFinalScoreBill()) Winner1.setText("Player 2 is the winner!");
-                Roll.setBackground(new java.awt.Color(204, 204, 204));
-                disableAllButtonsInTable();
-                disableAllDieButtons();
-                numTimesRollPressed = 3;
+                ifCheck();
             }
         }
     }//GEN-LAST:event_TwosYouActionPerformed
@@ -1617,14 +1605,7 @@ public class TwoPlayer extends javax.swing.JFrame {
                     a.billYahtzeeFinalCheck != 0 && a.billOnesFinalCheck != 0 && a.billTwosFinalCheck != 0 && a.billThreesFinalCheck != 0 && 
                     a.billFoursFinalCheck != 0 && a.billFivesFinalCheck != 0 && a.billSixesFinalCheck != 0)
             {
-                TotalScoreTextYou.setText(TotalScoreTextYou.getText() + a.findFinalScore());
-                TotalScoreTextBill.setText(TotalScoreTextBill.getText() + a.findFinalScoreBill());
-                if(a.findFinalScore()>a.findFinalScoreBill()) Winner1.setText("Player 1 is the winner!");
-                if(a.findFinalScore()<a.findFinalScoreBill()) Winner1.setText("Player 2 is the winner!");
-                Roll.setBackground(new java.awt.Color(204, 204, 204));
-                disableAllButtonsInTable();
-                disableAllDieButtons();
-                numTimesRollPressed = 3;
+                ifCheck();
             }
         }
         if(whosTurn%2 == 0)
@@ -1656,14 +1637,7 @@ public class TwoPlayer extends javax.swing.JFrame {
                     a.billYahtzeeFinalCheck != 0 && a.billOnesFinalCheck != 0 && a.billTwosFinalCheck != 0 && a.billThreesFinalCheck != 0 && 
                     a.billFoursFinalCheck != 0 && a.billFivesFinalCheck != 0 && a.billSixesFinalCheck != 0)
             {
-                TotalScoreTextYou.setText(TotalScoreTextYou.getText() + a.findFinalScore());
-                TotalScoreTextBill.setText(TotalScoreTextBill.getText() + a.findFinalScoreBill());
-                if(a.findFinalScore()>a.findFinalScoreBill()) Winner1.setText("Player 1 is the winner!");
-                if(a.findFinalScore()<a.findFinalScoreBill()) Winner1.setText("Player 2 is the winner!");
-                Roll.setBackground(new java.awt.Color(204, 204, 204));
-                disableAllButtonsInTable();
-                disableAllDieButtons();
-                numTimesRollPressed = 3;
+                ifCheck();
             }
         }
     }//GEN-LAST:event_ThreesYouActionPerformed
@@ -1699,15 +1673,7 @@ public class TwoPlayer extends javax.swing.JFrame {
                     a.billYahtzeeFinalCheck != 0 && a.billOnesFinalCheck != 0 && a.billTwosFinalCheck != 0 && a.billThreesFinalCheck != 0 && 
                     a.billFoursFinalCheck != 0 && a.billFivesFinalCheck != 0 && a.billSixesFinalCheck != 0)
             {
-                TotalScoreTextYou.setText(TotalScoreTextYou.getText() + a.findFinalScore());
-                TotalScoreTextBill.setText(TotalScoreTextBill.getText() + a.findFinalScoreBill());
-                if(a.findFinalScore()>a.findFinalScoreBill()) Winner1.setText("Player 1 is the winner!");
-                if(a.findFinalScore()<a.findFinalScoreBill()) Winner1.setText("Player 2 is the winner!");
-                pastGames.add(a.findFinalScore());
-                Roll.setBackground(new java.awt.Color(204, 204, 204));
-                disableAllButtonsInTable();
-                disableAllDieButtons();
-                numTimesRollPressed = 3;
+                ifCheck();
             }
         }
         if(whosTurn%2 == 0)
@@ -1739,14 +1705,7 @@ public class TwoPlayer extends javax.swing.JFrame {
                     a.billYahtzeeFinalCheck != 0 && a.billOnesFinalCheck != 0 && a.billTwosFinalCheck != 0 && a.billThreesFinalCheck != 0 && 
                     a.billFoursFinalCheck != 0 && a.billFivesFinalCheck != 0 && a.billSixesFinalCheck != 0)
             {
-                TotalScoreTextYou.setText(TotalScoreTextYou.getText() + a.findFinalScore());
-                TotalScoreTextBill.setText(TotalScoreTextBill.getText() + a.findFinalScoreBill());
-                if(a.findFinalScore()>a.findFinalScoreBill()) Winner1.setText("Player 1 is the winner!");
-                if(a.findFinalScore()<a.findFinalScoreBill()) Winner1.setText("Player 2 is the winner!");
-                Roll.setBackground(new java.awt.Color(204, 204, 204));
-                disableAllButtonsInTable();
-                disableAllDieButtons();
-                numTimesRollPressed = 3;
+                ifCheck();
             }
         }
     }//GEN-LAST:event_FoursYouActionPerformed
@@ -1782,14 +1741,7 @@ public class TwoPlayer extends javax.swing.JFrame {
                     a.billYahtzeeFinalCheck != 0 && a.billOnesFinalCheck != 0 && a.billTwosFinalCheck != 0 && a.billThreesFinalCheck != 0 && 
                     a.billFoursFinalCheck != 0 && a.billFivesFinalCheck != 0 && a.billSixesFinalCheck != 0)
             {
-                TotalScoreTextYou.setText(TotalScoreTextYou.getText() + a.findFinalScore());
-                TotalScoreTextBill.setText(TotalScoreTextBill.getText() + a.findFinalScoreBill());
-                if(a.findFinalScore()>a.findFinalScoreBill()) Winner1.setText("Player 1 is the winner!");
-                if(a.findFinalScore()<a.findFinalScoreBill()) Winner1.setText("Player 2 is the winner!");
-                Roll.setBackground(new java.awt.Color(204, 204, 204));
-                disableAllButtonsInTable();
-                disableAllDieButtons();
-                numTimesRollPressed = 3;
+                ifCheck();
             }
         }
         if(whosTurn%2 == 0)
@@ -1821,14 +1773,7 @@ public class TwoPlayer extends javax.swing.JFrame {
                     a.billYahtzeeFinalCheck != 0 && a.billOnesFinalCheck != 0 && a.billTwosFinalCheck != 0 && a.billThreesFinalCheck != 0 && 
                     a.billFoursFinalCheck != 0 && a.billFivesFinalCheck != 0 && a.billSixesFinalCheck != 0)
             {
-                TotalScoreTextYou.setText(TotalScoreTextYou.getText() + a.findFinalScore());
-                TotalScoreTextBill.setText(TotalScoreTextBill.getText() + a.findFinalScoreBill());
-                if(a.findFinalScore()>a.findFinalScoreBill()) Winner1.setText("Player 1 is the winner!");
-                if(a.findFinalScore()<a.findFinalScoreBill()) Winner1.setText("Player 2 is the winner!");
-                Roll.setBackground(new java.awt.Color(204, 204, 204));
-                disableAllButtonsInTable();
-                disableAllDieButtons();
-                numTimesRollPressed = 3;
+                ifCheck();
             }
         }
     }//GEN-LAST:event_FivesYouActionPerformed
@@ -1864,14 +1809,7 @@ public class TwoPlayer extends javax.swing.JFrame {
                     a.billYahtzeeFinalCheck != 0 && a.billOnesFinalCheck != 0 && a.billTwosFinalCheck != 0 && a.billThreesFinalCheck != 0 && 
                     a.billFoursFinalCheck != 0 && a.billFivesFinalCheck != 0 && a.billSixesFinalCheck != 0)
             {
-                TotalScoreTextYou.setText(TotalScoreTextYou.getText() + a.findFinalScore());
-                TotalScoreTextBill.setText(TotalScoreTextBill.getText() + a.findFinalScoreBill());
-                if(a.findFinalScore()>a.findFinalScoreBill()) Winner1.setText("Player 1 is the winner!");
-                if(a.findFinalScore()<a.findFinalScoreBill()) Winner1.setText("Player 2 is the winner!");
-                Roll.setBackground(new java.awt.Color(204, 204, 204));
-                disableAllButtonsInTable();
-                disableAllDieButtons();
-                numTimesRollPressed = 3;
+                ifCheck();
             }
         }
         if(whosTurn%2 == 0)
@@ -1903,14 +1841,7 @@ public class TwoPlayer extends javax.swing.JFrame {
                     a.billYahtzeeFinalCheck != 0 && a.billOnesFinalCheck != 0 && a.billTwosFinalCheck != 0 && a.billThreesFinalCheck != 0 && 
                     a.billFoursFinalCheck != 0 && a.billFivesFinalCheck != 0 && a.billSixesFinalCheck != 0)
             {
-                TotalScoreTextYou.setText(TotalScoreTextYou.getText() + a.findFinalScore());
-                TotalScoreTextBill.setText(TotalScoreTextBill.getText() + a.findFinalScoreBill());
-                if(a.findFinalScore()>a.findFinalScoreBill()) Winner1.setText("Player 1 is the winner!");
-                if(a.findFinalScore()<a.findFinalScoreBill()) Winner1.setText("Player 2 is the winner!");
-                Roll.setBackground(new java.awt.Color(204, 204, 204));
-                disableAllButtonsInTable();
-                disableAllDieButtons();
-                numTimesRollPressed = 3;
+                ifCheck();
             }
         }
     }//GEN-LAST:event_SixesYouActionPerformed
@@ -1939,14 +1870,7 @@ public class TwoPlayer extends javax.swing.JFrame {
                     a.billYahtzeeFinalCheck != 0 && a.billOnesFinalCheck != 0 && a.billTwosFinalCheck != 0 && a.billThreesFinalCheck != 0 && 
                     a.billFoursFinalCheck != 0 && a.billFivesFinalCheck != 0 && a.billSixesFinalCheck != 0)
             {
-                TotalScoreTextYou.setText(TotalScoreTextYou.getText() + a.findFinalScore());
-                TotalScoreTextBill.setText(TotalScoreTextBill.getText() + a.findFinalScoreBill());
-                if(a.findFinalScore()>a.findFinalScoreBill()) Winner1.setText("Player 1 is the winner!");
-                if(a.findFinalScore()<a.findFinalScoreBill()) Winner1.setText("Player 2 is the winner!");
-                Roll.setBackground(new java.awt.Color(204, 204, 204));
-                disableAllButtonsInTable();
-                disableAllDieButtons();
-                numTimesRollPressed = 3;
+                ifCheck();
             }
         }
         if(whosTurn%2 == 0)
@@ -1971,14 +1895,7 @@ public class TwoPlayer extends javax.swing.JFrame {
                     a.billYahtzeeFinalCheck != 0 && a.billOnesFinalCheck != 0 && a.billTwosFinalCheck != 0 && a.billThreesFinalCheck != 0 && 
                     a.billFoursFinalCheck != 0 && a.billFivesFinalCheck != 0 && a.billSixesFinalCheck != 0)
             {
-                TotalScoreTextYou.setText(TotalScoreTextYou.getText() + a.findFinalScore());
-                TotalScoreTextBill.setText(TotalScoreTextBill.getText() + a.findFinalScoreBill());
-                if(a.findFinalScore()>a.findFinalScoreBill()) Winner1.setText("Player 1 is the winner!");
-                if(a.findFinalScore()<a.findFinalScoreBill()) Winner1.setText("Player 2 is the winner!");
-                Roll.setBackground(new java.awt.Color(204, 204, 204));
-                disableAllButtonsInTable();
-                disableAllDieButtons();
-                numTimesRollPressed = 3;
+                ifCheck();
             }
         }
     }//GEN-LAST:event_ThreeKindYouActionPerformed
@@ -2007,14 +1924,7 @@ public class TwoPlayer extends javax.swing.JFrame {
                     a.billYahtzeeFinalCheck != 0 && a.billOnesFinalCheck != 0 && a.billTwosFinalCheck != 0 && a.billThreesFinalCheck != 0 && 
                     a.billFoursFinalCheck != 0 && a.billFivesFinalCheck != 0 && a.billSixesFinalCheck != 0)
             {
-                TotalScoreTextYou.setText(TotalScoreTextYou.getText() + a.findFinalScore());
-                TotalScoreTextBill.setText(TotalScoreTextBill.getText() + a.findFinalScoreBill());
-                if(a.findFinalScore()>a.findFinalScoreBill()) Winner1.setText("Player 1 is the winner!");
-                if(a.findFinalScore()<a.findFinalScoreBill()) Winner1.setText("Player 2 is the winner!");
-                Roll.setBackground(new java.awt.Color(204, 204, 204));
-                disableAllButtonsInTable();
-                disableAllDieButtons();
-                numTimesRollPressed = 3;
+                ifCheck();
             }
         }
         if(whosTurn%2 == 0)
@@ -2039,14 +1949,7 @@ public class TwoPlayer extends javax.swing.JFrame {
                     a.billYahtzeeFinalCheck != 0 && a.billOnesFinalCheck != 0 && a.billTwosFinalCheck != 0 && a.billThreesFinalCheck != 0 && 
                     a.billFoursFinalCheck != 0 && a.billFivesFinalCheck != 0 && a.billSixesFinalCheck != 0)
             {
-                TotalScoreTextYou.setText(TotalScoreTextYou.getText() + a.findFinalScore());
-                TotalScoreTextBill.setText(TotalScoreTextBill.getText() + a.findFinalScoreBill());
-                if(a.findFinalScore()>a.findFinalScoreBill()) Winner1.setText("Player 1 is the winner!");
-                if(a.findFinalScore()<a.findFinalScoreBill()) Winner1.setText("Player 2 is the winner!");
-                Roll.setBackground(new java.awt.Color(204, 204, 204));
-                disableAllButtonsInTable();
-                disableAllDieButtons();
-                numTimesRollPressed = 3;
+                ifCheck();
             }
         }
     }//GEN-LAST:event_FourKindYouActionPerformed
@@ -2075,14 +1978,7 @@ public class TwoPlayer extends javax.swing.JFrame {
                     a.billYahtzeeFinalCheck != 0 && a.billOnesFinalCheck != 0 && a.billTwosFinalCheck != 0 && a.billThreesFinalCheck != 0 && 
                     a.billFoursFinalCheck != 0 && a.billFivesFinalCheck != 0 && a.billSixesFinalCheck != 0)
             {
-                TotalScoreTextYou.setText(TotalScoreTextYou.getText() + a.findFinalScore());
-                TotalScoreTextBill.setText(TotalScoreTextBill.getText() + a.findFinalScoreBill());
-                if(a.findFinalScore()>a.findFinalScoreBill()) Winner1.setText("Player 1 is the winner!");
-                if(a.findFinalScore()<a.findFinalScoreBill()) Winner1.setText("Player 2 is the winner!");
-                Roll.setBackground(new java.awt.Color(204, 204, 204));
-                disableAllButtonsInTable();
-                disableAllDieButtons();
-                numTimesRollPressed = 3;
+                ifCheck();
             }
         }
         if(whosTurn%2 == 0)
@@ -2107,14 +2003,7 @@ public class TwoPlayer extends javax.swing.JFrame {
                     a.billYahtzeeFinalCheck != 0 && a.billOnesFinalCheck != 0 && a.billTwosFinalCheck != 0 && a.billThreesFinalCheck != 0 && 
                     a.billFoursFinalCheck != 0 && a.billFivesFinalCheck != 0 && a.billSixesFinalCheck != 0)
             {
-                TotalScoreTextYou.setText(TotalScoreTextYou.getText() + a.findFinalScore());
-                TotalScoreTextBill.setText(TotalScoreTextBill.getText() + a.findFinalScoreBill());
-                if(a.findFinalScore()>a.findFinalScoreBill()) Winner1.setText("Player 1 is the winner!");
-                if(a.findFinalScore()<a.findFinalScoreBill()) Winner1.setText("Player 2 is the winner!");
-                Roll.setBackground(new java.awt.Color(204, 204, 204));
-                disableAllButtonsInTable();
-                disableAllDieButtons();
-                numTimesRollPressed = 3;
+                ifCheck();
             }
         }
     }//GEN-LAST:event_FullHouseYouActionPerformed
@@ -2143,14 +2032,7 @@ public class TwoPlayer extends javax.swing.JFrame {
                     a.billYahtzeeFinalCheck != 0 && a.billOnesFinalCheck != 0 && a.billTwosFinalCheck != 0 && a.billThreesFinalCheck != 0 && 
                     a.billFoursFinalCheck != 0 && a.billFivesFinalCheck != 0 && a.billSixesFinalCheck != 0)
             {
-                TotalScoreTextYou.setText(TotalScoreTextYou.getText() + a.findFinalScore());
-                TotalScoreTextBill.setText(TotalScoreTextBill.getText() + a.findFinalScoreBill());
-                if(a.findFinalScore()>a.findFinalScoreBill()) Winner1.setText("Player 1 is the winner!");
-                if(a.findFinalScore()<a.findFinalScoreBill()) Winner1.setText("Player 2 is the winner!");
-                Roll.setBackground(new java.awt.Color(204, 204, 204));
-                disableAllButtonsInTable();
-                disableAllDieButtons();
-                numTimesRollPressed = 3;
+                ifCheck();
             }
         }
         if(whosTurn%2 == 0)
@@ -2175,14 +2057,7 @@ public class TwoPlayer extends javax.swing.JFrame {
                     a.billYahtzeeFinalCheck != 0 && a.billOnesFinalCheck != 0 && a.billTwosFinalCheck != 0 && a.billThreesFinalCheck != 0 && 
                     a.billFoursFinalCheck != 0 && a.billFivesFinalCheck != 0 && a.billSixesFinalCheck != 0)
             {
-                TotalScoreTextYou.setText(TotalScoreTextYou.getText() + a.findFinalScore());
-                TotalScoreTextBill.setText(TotalScoreTextBill.getText() + a.findFinalScoreBill());
-                if(a.findFinalScore()>a.findFinalScoreBill()) Winner1.setText("Player 1 is the winner!");
-                if(a.findFinalScore()<a.findFinalScoreBill()) Winner1.setText("Player 2 is the winner!");
-                Roll.setBackground(new java.awt.Color(204, 204, 204));
-                disableAllButtonsInTable();
-                disableAllDieButtons();
-                numTimesRollPressed = 3;
+                ifCheck();
             }
         }
     }//GEN-LAST:event_SmallStraightYouActionPerformed
@@ -2211,14 +2086,7 @@ public class TwoPlayer extends javax.swing.JFrame {
                     a.billYahtzeeFinalCheck != 0 && a.billOnesFinalCheck != 0 && a.billTwosFinalCheck != 0 && a.billThreesFinalCheck != 0 && 
                     a.billFoursFinalCheck != 0 && a.billFivesFinalCheck != 0 && a.billSixesFinalCheck != 0)
             {
-                TotalScoreTextYou.setText(TotalScoreTextYou.getText() + a.findFinalScore());
-                TotalScoreTextBill.setText(TotalScoreTextBill.getText() + a.findFinalScoreBill());
-                if(a.findFinalScore()>a.findFinalScoreBill()) Winner1.setText("Player 1 is the winner!");
-                if(a.findFinalScore()<a.findFinalScoreBill()) Winner1.setText("Player 2 is the winner!");
-                Roll.setBackground(new java.awt.Color(204, 204, 204));
-                disableAllButtonsInTable();
-                disableAllDieButtons();
-                numTimesRollPressed = 3;
+                ifCheck();
             }
         }
         if(whosTurn%2 == 0)
@@ -2243,14 +2111,7 @@ public class TwoPlayer extends javax.swing.JFrame {
                     a.billYahtzeeFinalCheck != 0 && a.billOnesFinalCheck != 0 && a.billTwosFinalCheck != 0 && a.billThreesFinalCheck != 0 && 
                     a.billFoursFinalCheck != 0 && a.billFivesFinalCheck != 0 && a.billSixesFinalCheck != 0)
             {
-                TotalScoreTextYou.setText(TotalScoreTextYou.getText() + a.findFinalScore());
-                TotalScoreTextBill.setText(TotalScoreTextBill.getText() + a.findFinalScoreBill());
-                if(a.findFinalScore()>a.findFinalScoreBill()) Winner1.setText("Player 1 is the winner!");
-                if(a.findFinalScore()<a.findFinalScoreBill()) Winner1.setText("Player 2 is the winner!");
-                Roll.setBackground(new java.awt.Color(204, 204, 204));
-                disableAllButtonsInTable();
-                disableAllDieButtons();
-                numTimesRollPressed = 3;
+                ifCheck();
             }
         }
     }//GEN-LAST:event_LargeStraightYouActionPerformed
@@ -2279,14 +2140,7 @@ public class TwoPlayer extends javax.swing.JFrame {
                     a.billYahtzeeFinalCheck != 0 && a.billOnesFinalCheck != 0 && a.billTwosFinalCheck != 0 && a.billThreesFinalCheck != 0 && 
                     a.billFoursFinalCheck != 0 && a.billFivesFinalCheck != 0 && a.billSixesFinalCheck != 0)
             {
-                TotalScoreTextYou.setText(TotalScoreTextYou.getText() + a.findFinalScore());
-                TotalScoreTextBill.setText(TotalScoreTextBill.getText() + a.findFinalScoreBill());
-                if(a.findFinalScore()>a.findFinalScoreBill()) Winner1.setText("Player 1 is the winner!");
-                if(a.findFinalScore()<a.findFinalScoreBill()) Winner1.setText("Player 2 is the winner!");
-                Roll.setBackground(new java.awt.Color(204, 204, 204));
-                disableAllButtonsInTable();
-                disableAllDieButtons();
-                numTimesRollPressed = 3;
+                ifCheck();
             }
         }
         if(whosTurn%2 == 0)
@@ -2311,14 +2165,7 @@ public class TwoPlayer extends javax.swing.JFrame {
                     a.billYahtzeeFinalCheck != 0 && a.billOnesFinalCheck != 0 && a.billTwosFinalCheck != 0 && a.billThreesFinalCheck != 0 && 
                     a.billFoursFinalCheck != 0 && a.billFivesFinalCheck != 0 && a.billSixesFinalCheck != 0)
             {
-                TotalScoreTextYou.setText(TotalScoreTextYou.getText() + a.findFinalScore());
-                TotalScoreTextBill.setText(TotalScoreTextBill.getText() + a.findFinalScoreBill());
-                if(a.findFinalScore()>a.findFinalScoreBill()) Winner1.setText("Player 1 is the winner!");
-                if(a.findFinalScore()<a.findFinalScoreBill()) Winner1.setText("Player 2 is the winner!");
-                Roll.setBackground(new java.awt.Color(204, 204, 204));
-                disableAllButtonsInTable();
-                disableAllDieButtons();
-                numTimesRollPressed = 3;
+                ifCheck();
             }
         }
     }//GEN-LAST:event_ChanceYouActionPerformed
@@ -2356,14 +2203,7 @@ public class TwoPlayer extends javax.swing.JFrame {
                     a.billYahtzeeFinalCheck != 0 && a.billOnesFinalCheck != 0 && a.billTwosFinalCheck != 0 && a.billThreesFinalCheck != 0 && 
                     a.billFoursFinalCheck != 0 && a.billFivesFinalCheck != 0 && a.billSixesFinalCheck != 0)
             {
-                TotalScoreTextYou.setText(TotalScoreTextYou.getText() + a.findFinalScore());
-                TotalScoreTextBill.setText(TotalScoreTextBill.getText() + a.findFinalScoreBill());
-                if(a.findFinalScore()>a.findFinalScoreBill()) Winner1.setText("Player 1 is the winner!");
-                if(a.findFinalScore()<a.findFinalScoreBill()) Winner1.setText("Player 2 is the winner!");
-                Roll.setBackground(new java.awt.Color(204, 204, 204));
-                disableAllButtonsInTable();
-                disableAllDieButtons();
-                numTimesRollPressed = 3;
+                ifCheck();
             }
         }
         if(whosTurn%2 == 0)
@@ -2397,14 +2237,7 @@ public class TwoPlayer extends javax.swing.JFrame {
                     a.billYahtzeeFinalCheck != 0 && a.billOnesFinalCheck != 0 && a.billTwosFinalCheck != 0 && a.billThreesFinalCheck != 0 && 
                     a.billFoursFinalCheck != 0 && a.billFivesFinalCheck != 0 && a.billSixesFinalCheck != 0)
             {
-                TotalScoreTextYou.setText(TotalScoreTextYou.getText() + a.findFinalScore());
-                TotalScoreTextBill.setText(TotalScoreTextBill.getText() + a.findFinalScoreBill());
-                if(a.findFinalScore()>a.findFinalScoreBill()) Winner1.setText("Player 1 is the winner!");
-                if(a.findFinalScore()<a.findFinalScoreBill()) Winner1.setText("Player 2 is the winner!");
-                Roll.setBackground(new java.awt.Color(204, 204, 204));
-                disableAllButtonsInTable();
-                disableAllDieButtons();
-                numTimesRollPressed = 3;
+                ifCheck();
             }
         }
     }//GEN-LAST:event_YahtzeeYouActionPerformed

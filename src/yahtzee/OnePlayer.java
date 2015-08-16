@@ -90,19 +90,6 @@ public class OnePlayer extends javax.swing.JFrame {
         Four4 = new javax.swing.JLabel();
         Five4 = new javax.swing.JLabel();
         Six4 = new javax.swing.JLabel();
-        indicatorOnes = new javax.swing.JPanel();
-        indicatorTwos = new javax.swing.JPanel();
-        indicatorThrees = new javax.swing.JPanel();
-        indicatorFours = new javax.swing.JPanel();
-        indicatorFives = new javax.swing.JPanel();
-        indicatorSixes = new javax.swing.JPanel();
-        indicatorThreeOfAKind = new javax.swing.JPanel();
-        indicatorFourOfAKind = new javax.swing.JPanel();
-        indicatorFullHouse = new javax.swing.JPanel();
-        indicatorSmallStraight = new javax.swing.JPanel();
-        indicatorLargeStraight = new javax.swing.JPanel();
-        indicatorChance = new javax.swing.JPanel();
-        indicatorYahtzee = new javax.swing.JPanel();
         indicatorDieOne = new javax.swing.JPanel();
         indicatorDieTwo = new javax.swing.JPanel();
         indicatorDieThree = new javax.swing.JPanel();
@@ -115,6 +102,7 @@ public class OnePlayer extends javax.swing.JFrame {
         Winner = new javax.swing.JScrollPane();
         Winner1 = new javax.swing.JTextArea();
         NewGame = new javax.swing.JButton();
+        PastScores = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         Table = new javax.swing.JTable();
         Roll = new javax.swing.JButton();
@@ -523,71 +511,6 @@ public class OnePlayer extends javax.swing.JFrame {
         getContentPane().add(Six4);
         Six4.setBounds(470, 280, 100, 110);
 
-        indicatorOnes.setBackground(new java.awt.Color(153, 153, 153));
-        indicatorOnes.setForeground(new java.awt.Color(153, 153, 153));
-        getContentPane().add(indicatorOnes);
-        indicatorOnes.setBounds(590, 40, 10, 10);
-
-        indicatorTwos.setBackground(new java.awt.Color(153, 153, 153));
-        indicatorTwos.setForeground(new java.awt.Color(153, 153, 153));
-        getContentPane().add(indicatorTwos);
-        indicatorTwos.setBounds(590, 70, 10, 10);
-
-        indicatorThrees.setBackground(new java.awt.Color(153, 153, 153));
-        indicatorThrees.setForeground(new java.awt.Color(153, 153, 153));
-        getContentPane().add(indicatorThrees);
-        indicatorThrees.setBounds(590, 100, 10, 10);
-
-        indicatorFours.setBackground(new java.awt.Color(153, 153, 153));
-        indicatorFours.setForeground(new java.awt.Color(153, 153, 153));
-        getContentPane().add(indicatorFours);
-        indicatorFours.setBounds(590, 130, 10, 10);
-
-        indicatorFives.setBackground(new java.awt.Color(153, 153, 153));
-        indicatorFives.setForeground(new java.awt.Color(153, 153, 153));
-        getContentPane().add(indicatorFives);
-        indicatorFives.setBounds(590, 160, 10, 10);
-
-        indicatorSixes.setBackground(new java.awt.Color(153, 153, 153));
-        indicatorSixes.setForeground(new java.awt.Color(153, 153, 153));
-        getContentPane().add(indicatorSixes);
-        indicatorSixes.setBounds(590, 190, 10, 10);
-
-        indicatorThreeOfAKind.setBackground(new java.awt.Color(153, 153, 153));
-        indicatorThreeOfAKind.setForeground(new java.awt.Color(153, 153, 153));
-        getContentPane().add(indicatorThreeOfAKind);
-        indicatorThreeOfAKind.setBounds(590, 280, 10, 10);
-
-        indicatorFourOfAKind.setBackground(new java.awt.Color(153, 153, 153));
-        indicatorFourOfAKind.setForeground(new java.awt.Color(153, 153, 153));
-        getContentPane().add(indicatorFourOfAKind);
-        indicatorFourOfAKind.setBounds(590, 310, 10, 10);
-
-        indicatorFullHouse.setBackground(new java.awt.Color(153, 153, 153));
-        indicatorFullHouse.setForeground(new java.awt.Color(153, 153, 153));
-        getContentPane().add(indicatorFullHouse);
-        indicatorFullHouse.setBounds(590, 340, 10, 10);
-
-        indicatorSmallStraight.setBackground(new java.awt.Color(153, 153, 153));
-        indicatorSmallStraight.setForeground(new java.awt.Color(153, 153, 153));
-        getContentPane().add(indicatorSmallStraight);
-        indicatorSmallStraight.setBounds(590, 370, 10, 10);
-
-        indicatorLargeStraight.setBackground(new java.awt.Color(153, 153, 153));
-        indicatorLargeStraight.setForeground(new java.awt.Color(153, 153, 153));
-        getContentPane().add(indicatorLargeStraight);
-        indicatorLargeStraight.setBounds(590, 400, 10, 10);
-
-        indicatorChance.setBackground(new java.awt.Color(153, 153, 153));
-        indicatorChance.setForeground(new java.awt.Color(153, 153, 153));
-        getContentPane().add(indicatorChance);
-        indicatorChance.setBounds(590, 430, 10, 10);
-
-        indicatorYahtzee.setBackground(new java.awt.Color(153, 153, 153));
-        indicatorYahtzee.setForeground(new java.awt.Color(153, 153, 153));
-        getContentPane().add(indicatorYahtzee);
-        indicatorYahtzee.setBounds(590, 460, 10, 10);
-
         indicatorDieOne.setBackground(new java.awt.Color(153, 153, 153));
         indicatorDieOne.setForeground(new java.awt.Color(153, 153, 153));
         getContentPane().add(indicatorDieOne);
@@ -650,13 +573,28 @@ public class OnePlayer extends javax.swing.JFrame {
         NewGame.setBackground(new java.awt.Color(153, 153, 153));
         NewGame.setFont(new java.awt.Font("LiSong Pro", 0, 12)); // NOI18N
         NewGame.setText("New Game");
+        NewGame.setBounds(new java.awt.Rectangle(10, 30, 104, 29));
+        NewGame.setMaximumSize(new java.awt.Dimension(106, 29));
+        NewGame.setMinimumSize(new java.awt.Dimension(106, 29));
+        NewGame.setPreferredSize(new java.awt.Dimension(106, 29));
         NewGame.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 NewGameActionPerformed(evt);
             }
         });
         getContentPane().add(NewGame);
-        NewGame.setBounds(10, 10, 103, 29);
+        NewGame.setBounds(10, 30, 106, 29);
+
+        PastScores.setBackground(new java.awt.Color(153, 153, 153));
+        PastScores.setFont(new java.awt.Font("LiSong Pro", 0, 12)); // NOI18N
+        PastScores.setText("Past Games");
+        PastScores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PastScoresActionPerformed(evt);
+            }
+        });
+        getContentPane().add(PastScores);
+        PastScores.setBounds(10, 60, 106, 29);
 
         Table.setFont(new java.awt.Font("LiSong Pro", 0, 14)); // NOI18N
         Table.setModel(new javax.swing.table.DefaultTableModel(
@@ -740,6 +678,7 @@ public class OnePlayer extends javax.swing.JFrame {
 
     
     Actions a = new Actions();
+    PastGames p = new PastGames();
     int firstDie = 0;
     int secondDie = 0;
     int thirdDie = 0;
@@ -802,20 +741,7 @@ public class OnePlayer extends javax.swing.JFrame {
         Table.setColumnSelectionAllowed(false); 
         Table.setFocusable(false);
         Table.setCellSelectionEnabled(false);
-        
-        indicatorOnes.setVisible(false);
-        indicatorTwos.setVisible(false);
-        indicatorThrees.setVisible(false);
-        indicatorFours.setVisible(false);
-        indicatorFives.setVisible(false);
-        indicatorSixes.setVisible(false);
-        indicatorThreeOfAKind.setVisible(false);
-        indicatorFourOfAKind.setVisible(false);
-        indicatorFullHouse.setVisible(false);
-        indicatorSmallStraight.setVisible(false);
-        indicatorLargeStraight.setVisible(false);
-        indicatorChance.setVisible(false);
-        indicatorYahtzee.setVisible(false);
+
     }
     public void setVisibleFalse()
     {
@@ -1268,11 +1194,24 @@ public class OnePlayer extends javax.swing.JFrame {
         numTimesDieFivePressed++;
     }//GEN-LAST:event_FifthDieActionPerformed
 
+    public void ifCheck()
+    {
+        TotalScoreTextYou.setText(TotalScoreTextYou.getText() + a.findFinalScore());
+        pastGames.add(a.findFinalScore());
+        Roll.setBackground(new java.awt.Color(204, 204, 204));
+        disableAllButtonsInTable();
+        disableAllDieButtons();
+        ifHighScore(a.findFinalScore());
+        numTimesRollPressed = 3;
+        
+        p.PastGamesText.setVisible(true);
+        p.PastGamesText.setText(printPastGames());
+    }
+    
     private void OnesYouActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OnesYouActionPerformed
         
         a.ones = a.countOnes();
         a.youOnesFinalCheck = 1;
-        indicatorOnes.setVisible(true);
         resetForNextRoll();
         disableAllButtonsInTable();
         disableAllDieButtons();
@@ -1292,13 +1231,7 @@ public class OnePlayer extends javax.swing.JFrame {
                 a.youYahtzeeFinalCheck != 0 && a.youOnesFinalCheck != 0 && a.youTwosFinalCheck != 0 && a.youThreesFinalCheck != 0 && 
                 a.youFoursFinalCheck != 0 && a.youFivesFinalCheck != 0 && a.youSixesFinalCheck != 0)
         {
-            TotalScoreTextYou.setText(TotalScoreTextYou.getText() + a.findFinalScore());
-            pastGames.add(a.findFinalScore());
-            Roll.setBackground(new java.awt.Color(204, 204, 204));
-            disableAllButtonsInTable();
-            disableAllDieButtons();
-            ifHighScore(a.findFinalScore());
-            numTimesRollPressed = 3;
+            ifCheck();
         }
         RollsLeft.setText("Rolls Left: 3");
         
@@ -1307,7 +1240,6 @@ public class OnePlayer extends javax.swing.JFrame {
     private void TwosYouActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TwosYouActionPerformed
         a.twos = a.countTwos();
         a.youTwosFinalCheck = 1;
-        indicatorTwos.setVisible(true);
         resetForNextRoll();
         disableAllButtonsInTable();
         disableAllDieButtons();
@@ -1327,13 +1259,7 @@ public class OnePlayer extends javax.swing.JFrame {
                 a.youYahtzeeFinalCheck != 0 && a.youOnesFinalCheck != 0 && a.youTwosFinalCheck != 0 && a.youThreesFinalCheck != 0 && 
                 a.youFoursFinalCheck != 0 && a.youFivesFinalCheck != 0 && a.youSixesFinalCheck != 0)
         {
-            TotalScoreTextYou.setText(TotalScoreTextYou.getText() + a.findFinalScore());
-            pastGames.add(a.findFinalScore());
-            Roll.setBackground(new java.awt.Color(204, 204, 204));
-            disableAllButtonsInTable();
-            disableAllDieButtons();
-            ifHighScore(a.findFinalScore());
-            numTimesRollPressed = 3;
+            ifCheck();
         }
         RollsLeft.setText("Rolls Left: 3");
     }//GEN-LAST:event_TwosYouActionPerformed
@@ -1341,7 +1267,6 @@ public class OnePlayer extends javax.swing.JFrame {
     private void ThreesYouActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ThreesYouActionPerformed
         a.threes = a.countThrees();
         a.youThreesFinalCheck = 1;
-        indicatorThrees.setVisible(true);
         resetForNextRoll();
         disableAllButtonsInTable();
         disableAllDieButtons();
@@ -1361,13 +1286,7 @@ public class OnePlayer extends javax.swing.JFrame {
                 a.youYahtzeeFinalCheck != 0 && a.youOnesFinalCheck != 0 && a.youTwosFinalCheck != 0 && a.youThreesFinalCheck != 0 && 
                 a.youFoursFinalCheck != 0 && a.youFivesFinalCheck != 0 && a.youSixesFinalCheck != 0)
         {
-            TotalScoreTextYou.setText(TotalScoreTextYou.getText() + a.findFinalScore());
-            pastGames.add(a.findFinalScore());
-            Roll.setBackground(new java.awt.Color(204, 204, 204));
-            disableAllButtonsInTable();
-            disableAllDieButtons();
-            ifHighScore(a.findFinalScore());
-            numTimesRollPressed = 3;
+            ifCheck();
         }
         RollsLeft.setText("Rolls Left: 3");
     }//GEN-LAST:event_ThreesYouActionPerformed
@@ -1375,7 +1294,6 @@ public class OnePlayer extends javax.swing.JFrame {
     private void FoursYouActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FoursYouActionPerformed
         a.fours = a.countFours();
         a.youFoursFinalCheck = 1;
-        indicatorFours.setVisible(true);
         resetForNextRoll();
         disableAllButtonsInTable();
         disableAllDieButtons();
@@ -1395,13 +1313,7 @@ public class OnePlayer extends javax.swing.JFrame {
                 a.youYahtzeeFinalCheck != 0 && a.youOnesFinalCheck != 0 && a.youTwosFinalCheck != 0 && a.youThreesFinalCheck != 0 && 
                 a.youFoursFinalCheck != 0 && a.youFivesFinalCheck != 0 && a.youSixesFinalCheck != 0)
         {
-            TotalScoreTextYou.setText(TotalScoreTextYou.getText() + a.findFinalScore());
-            pastGames.add(a.findFinalScore());
-            Roll.setBackground(new java.awt.Color(204, 204, 204));
-            disableAllButtonsInTable();
-            disableAllDieButtons();
-            ifHighScore(a.findFinalScore());
-            numTimesRollPressed = 3;
+            ifCheck();
         }
         RollsLeft.setText("Rolls Left: 3");
     }//GEN-LAST:event_FoursYouActionPerformed
@@ -1409,7 +1321,6 @@ public class OnePlayer extends javax.swing.JFrame {
     private void FivesYouActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FivesYouActionPerformed
         a.fives = a.countFives();
         a.youFivesFinalCheck = 1;
-        indicatorFives.setVisible(true);
         resetForNextRoll();
         disableAllButtonsInTable();
         disableAllDieButtons();
@@ -1429,13 +1340,7 @@ public class OnePlayer extends javax.swing.JFrame {
                 a.youYahtzeeFinalCheck != 0 && a.youOnesFinalCheck != 0 && a.youTwosFinalCheck != 0 && a.youThreesFinalCheck != 0 && 
                 a.youFoursFinalCheck != 0 && a.youFivesFinalCheck != 0 && a.youSixesFinalCheck != 0)
         {
-            TotalScoreTextYou.setText(TotalScoreTextYou.getText() + a.findFinalScore());
-            pastGames.add(a.findFinalScore());
-            Roll.setBackground(new java.awt.Color(204, 204, 204));
-            disableAllButtonsInTable();
-            disableAllDieButtons();
-            ifHighScore(a.findFinalScore());
-            numTimesRollPressed = 3;
+            ifCheck();
         }
         RollsLeft.setText("Rolls Left: 3");
     }//GEN-LAST:event_FivesYouActionPerformed
@@ -1443,7 +1348,6 @@ public class OnePlayer extends javax.swing.JFrame {
     private void SixesYouActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SixesYouActionPerformed
         a.sixes = a.countSixes();
         a.youSixesFinalCheck = 1;
-        indicatorSixes.setVisible(true);
         resetForNextRoll();
         disableAllButtonsInTable();
         disableAllDieButtons();
@@ -1463,13 +1367,7 @@ public class OnePlayer extends javax.swing.JFrame {
                 a.youYahtzeeFinalCheck != 0 && a.youOnesFinalCheck != 0 && a.youTwosFinalCheck != 0 && a.youThreesFinalCheck != 0 && 
                 a.youFoursFinalCheck != 0 && a.youFivesFinalCheck != 0 && a.youSixesFinalCheck != 0)
         {
-            TotalScoreTextYou.setText(TotalScoreTextYou.getText() + a.findFinalScore());
-            pastGames.add(a.findFinalScore());
-            Roll.setBackground(new java.awt.Color(204, 204, 204));
-            disableAllButtonsInTable();
-            disableAllDieButtons();
-            ifHighScore(a.findFinalScore());
-            numTimesRollPressed = 3;
+            ifCheck();
         }
         RollsLeft.setText("Rolls Left: 3");
     }//GEN-LAST:event_SixesYouActionPerformed
@@ -1477,7 +1375,6 @@ public class OnePlayer extends javax.swing.JFrame {
     private void ThreeKindYouActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ThreeKindYouActionPerformed
         a.threeOfAKind = a.countThreeOfAKind();
         a.youThreeOfAKindFinalCheck = 1;
-        indicatorThreeOfAKind.setVisible(true);
         resetForNextRoll();
         disableAllButtonsInTable();
         disableAllDieButtons();
@@ -1490,13 +1387,7 @@ public class OnePlayer extends javax.swing.JFrame {
                 a.youYahtzeeFinalCheck != 0 && a.youOnesFinalCheck != 0 && a.youTwosFinalCheck != 0 && a.youThreesFinalCheck != 0 && 
                 a.youFoursFinalCheck != 0 && a.youFivesFinalCheck != 0 && a.youSixesFinalCheck != 0)
         {
-            TotalScoreTextYou.setText(TotalScoreTextYou.getText() + a.findFinalScore());
-            pastGames.add(a.findFinalScore());
-            Roll.setBackground(new java.awt.Color(204, 204, 204));
-            disableAllButtonsInTable();
-            disableAllDieButtons();
-            ifHighScore(a.findFinalScore());
-            numTimesRollPressed = 3;
+            ifCheck();
         }
         RollsLeft.setText("Rolls Left: 3");
     }//GEN-LAST:event_ThreeKindYouActionPerformed
@@ -1504,7 +1395,6 @@ public class OnePlayer extends javax.swing.JFrame {
     private void FourKindYouActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FourKindYouActionPerformed
         a.fourOfAKind = a.countFourOfAKind();
         a.youFourOfAKindFinalCheck = 1;
-        indicatorFourOfAKind.setVisible(true);
         resetForNextRoll();
         disableAllButtonsInTable();
         disableAllDieButtons();
@@ -1517,13 +1407,7 @@ public class OnePlayer extends javax.swing.JFrame {
                 a.youYahtzeeFinalCheck != 0 && a.youOnesFinalCheck != 0 && a.youTwosFinalCheck != 0 && a.youThreesFinalCheck != 0 && 
                 a.youFoursFinalCheck != 0 && a.youFivesFinalCheck != 0 && a.youSixesFinalCheck != 0)
         {
-            TotalScoreTextYou.setText(TotalScoreTextYou.getText() + a.findFinalScore());
-            pastGames.add(a.findFinalScore());
-            Roll.setBackground(new java.awt.Color(204, 204, 204));
-            disableAllButtonsInTable();
-            disableAllDieButtons();
-            ifHighScore(a.findFinalScore());
-            numTimesRollPressed = 3;
+            ifCheck();
         }
         RollsLeft.setText("Rolls Left: 3");
     }//GEN-LAST:event_FourKindYouActionPerformed
@@ -1531,7 +1415,6 @@ public class OnePlayer extends javax.swing.JFrame {
     private void FullHouseYouActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FullHouseYouActionPerformed
         a.fullHouse = a.countFullHouse();
         a.youFullHouseFinalCheck = 1;
-        indicatorFullHouse.setVisible(true);
         resetForNextRoll();
         disableAllButtonsInTable();
         disableAllDieButtons();
@@ -1544,13 +1427,7 @@ public class OnePlayer extends javax.swing.JFrame {
                 a.youYahtzeeFinalCheck != 0 && a.youOnesFinalCheck != 0 && a.youTwosFinalCheck != 0 && a.youThreesFinalCheck != 0 && 
                 a.youFoursFinalCheck != 0 && a.youFivesFinalCheck != 0 && a.youSixesFinalCheck != 0)
         {
-            TotalScoreTextYou.setText(TotalScoreTextYou.getText() + a.findFinalScore());
-            pastGames.add(a.findFinalScore());
-            Roll.setBackground(new java.awt.Color(204, 204, 204));
-            disableAllButtonsInTable();
-            disableAllDieButtons();
-            ifHighScore(a.findFinalScore());
-            numTimesRollPressed = 3;
+            ifCheck();
         }
         RollsLeft.setText("Rolls Left: 3");
     }//GEN-LAST:event_FullHouseYouActionPerformed
@@ -1558,7 +1435,6 @@ public class OnePlayer extends javax.swing.JFrame {
     private void SmallStraightYouActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SmallStraightYouActionPerformed
         a.smallStraight = a.countSmallStraight();
         a.youSmallStraightFinalCheck = 1;
-        indicatorSmallStraight.setVisible(true);
         resetForNextRoll();
         disableAllButtonsInTable();
         disableAllDieButtons();
@@ -1571,13 +1447,7 @@ public class OnePlayer extends javax.swing.JFrame {
                 a.youYahtzeeFinalCheck != 0 && a.youOnesFinalCheck != 0 && a.youTwosFinalCheck != 0 && a.youThreesFinalCheck != 0 && 
                 a.youFoursFinalCheck != 0 && a.youFivesFinalCheck != 0 && a.youSixesFinalCheck != 0)
         {
-            TotalScoreTextYou.setText(TotalScoreTextYou.getText() + a.findFinalScore());
-            pastGames.add(a.findFinalScore());
-            Roll.setBackground(new java.awt.Color(204, 204, 204));
-            disableAllButtonsInTable();
-            disableAllDieButtons();
-            ifHighScore(a.findFinalScore());
-            numTimesRollPressed = 3;
+            ifCheck();
         }
         RollsLeft.setText("Rolls Left: 3");
     }//GEN-LAST:event_SmallStraightYouActionPerformed
@@ -1585,7 +1455,6 @@ public class OnePlayer extends javax.swing.JFrame {
     private void LargeStraightYouActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LargeStraightYouActionPerformed
         a.largeStraight = a.countLargeStraight();
         a.youLargeStraightFinalCheck = 1;
-        indicatorLargeStraight.setVisible(true);
         resetForNextRoll();
         disableAllButtonsInTable();
         disableAllDieButtons();
@@ -1598,13 +1467,7 @@ public class OnePlayer extends javax.swing.JFrame {
                 a.youYahtzeeFinalCheck != 0 && a.youOnesFinalCheck != 0 && a.youTwosFinalCheck != 0 && a.youThreesFinalCheck != 0 && 
                 a.youFoursFinalCheck != 0 && a.youFivesFinalCheck != 0 && a.youSixesFinalCheck != 0)
         {
-            TotalScoreTextYou.setText(TotalScoreTextYou.getText() + a.findFinalScore());
-            pastGames.add(a.findFinalScore());
-            Roll.setBackground(new java.awt.Color(204, 204, 204));
-            disableAllButtonsInTable();
-            disableAllDieButtons();
-            ifHighScore(a.findFinalScore());
-            numTimesRollPressed = 3;
+            ifCheck();
         }
         RollsLeft.setText("Rolls Left: 3");
     }//GEN-LAST:event_LargeStraightYouActionPerformed
@@ -1612,7 +1475,6 @@ public class OnePlayer extends javax.swing.JFrame {
     private void ChanceYouActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChanceYouActionPerformed
         a.chance = a.countChance();
         a.youChanceFinalCheck = 1;
-        indicatorChance.setVisible(true);
         resetForNextRoll();
         disableAllButtonsInTable();
         disableAllDieButtons();
@@ -1625,13 +1487,7 @@ public class OnePlayer extends javax.swing.JFrame {
                 a.youYahtzeeFinalCheck != 0 && a.youOnesFinalCheck != 0 && a.youTwosFinalCheck != 0 && a.youThreesFinalCheck != 0 && 
                 a.youFoursFinalCheck != 0 && a.youFivesFinalCheck != 0 && a.youSixesFinalCheck != 0)
         {
-            TotalScoreTextYou.setText(TotalScoreTextYou.getText() + a.findFinalScore());
-            pastGames.add(a.findFinalScore());
-            Roll.setBackground(new java.awt.Color(204, 204, 204));
-            disableAllButtonsInTable();
-            disableAllDieButtons();
-            ifHighScore(a.findFinalScore());
-            numTimesRollPressed = 3;
+            ifCheck();
         }
         RollsLeft.setText("Rolls Left: 3");
     }//GEN-LAST:event_ChanceYouActionPerformed
@@ -1650,7 +1506,6 @@ public class OnePlayer extends javax.swing.JFrame {
         YahtzeeTextYou.setForeground(new java.awt.Color(0, 0, 0));
         YahtzeeTextYou.setFont(new java.awt.Font("LiHei Pro", 1, 13));
         a.youYahtzeeFinalCheck = 1;
-        indicatorYahtzee.setVisible(true);
         resetForNextRoll();
         disableAllButtonsInTable();
         disableAllDieButtons();
@@ -1661,13 +1516,7 @@ public class OnePlayer extends javax.swing.JFrame {
                 a.youYahtzeeFinalCheck != 0 && a.youOnesFinalCheck != 0 && a.youTwosFinalCheck != 0 && a.youThreesFinalCheck != 0 && 
                 a.youFoursFinalCheck != 0 && a.youFivesFinalCheck != 0 && a.youSixesFinalCheck != 0)
         {
-            TotalScoreTextYou.setText(TotalScoreTextYou.getText() + a.findFinalScore());
-            pastGames.add(a.findFinalScore());
-            Roll.setBackground(new java.awt.Color(204, 204, 204));
-            disableAllButtonsInTable();
-            disableAllDieButtons();
-            ifHighScore(a.findFinalScore());
-            numTimesRollPressed = 3;
+            ifCheck();
         }
         RollsLeft.setText("Rolls Left: 3");
     }//GEN-LAST:event_YahtzeeYouActionPerformed
@@ -1675,6 +1524,22 @@ public class OnePlayer extends javax.swing.JFrame {
     private void NewGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewGameActionPerformed
         restartGame();
     }//GEN-LAST:event_NewGameActionPerformed
+ 
+    public String printPastGames()
+    {
+        String printMe = "";
+        for(int i = 0; i < pastGames.size(); i++)
+        {
+            printMe+=i+1 + ". " + pastGames.get(i) + "\n";
+        }
+        return printMe;
+    }
+    private void PastScoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PastScoresActionPerformed
+        
+        p.setVisible(true);
+        
+        
+    }//GEN-LAST:event_PastScoresActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1763,6 +1628,7 @@ public class OnePlayer extends javax.swing.JFrame {
     private javax.swing.JLabel One4;
     private javax.swing.JLabel OnesTextYou;
     private javax.swing.JButton OnesYou;
+    private javax.swing.JButton PastScores;
     private javax.swing.JButton Roll;
     private javax.swing.JLabel RollsLeft;
     private javax.swing.JButton Rules;
@@ -1801,24 +1667,11 @@ public class OnePlayer extends javax.swing.JFrame {
     private javax.swing.JLabel Yahtzee;
     private javax.swing.JLabel YahtzeeTextYou;
     private javax.swing.JButton YahtzeeYou;
-    public javax.swing.JPanel indicatorChance;
     public javax.swing.JPanel indicatorDieFive;
     public javax.swing.JPanel indicatorDieFour;
     public javax.swing.JPanel indicatorDieOne;
     public javax.swing.JPanel indicatorDieThree;
     public javax.swing.JPanel indicatorDieTwo;
-    public javax.swing.JPanel indicatorFives;
-    public javax.swing.JPanel indicatorFourOfAKind;
-    public javax.swing.JPanel indicatorFours;
-    public javax.swing.JPanel indicatorFullHouse;
-    public javax.swing.JPanel indicatorLargeStraight;
-    public javax.swing.JPanel indicatorOnes;
-    public javax.swing.JPanel indicatorSixes;
-    public javax.swing.JPanel indicatorSmallStraight;
-    public javax.swing.JPanel indicatorThreeOfAKind;
-    public javax.swing.JPanel indicatorThrees;
-    public javax.swing.JPanel indicatorTwos;
-    public javax.swing.JPanel indicatorYahtzee;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
